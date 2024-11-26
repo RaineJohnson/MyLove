@@ -1,173 +1,112 @@
-<!DOCTYPE html>
-<html lang="en">
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>For My Princess</title>
-    <script src="https://kit.fontawesome.com/a14ae32021.js" crossorigin="anonymous"></script>
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <style>
-        @font-face {
-            font-family: digit;
-            src: url('digital-7_mono.ttf') format("truetype");
-        }
+<script src="https://kit.fontawesome.com/a14ae32021.js" crossorigin="anonymous"></script>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>For My Princess</title>
 
-        body {
-            margin: 0;
-            font-family: Arial, sans-serif;
-            background-color: #f4f4f4;
-            color: #333;
-        }
+<style type="text/css">
+@font-face {
+	font-family: digit;
+	src: url('digital-7_mono.ttf') format("truetype");
+}
+</style>
+<link href="css/default.css" type="text/css" rel="stylesheet">
+<script type="text/javascript" src="js/jquery.js"></script>
+<script type="text/javascript" src="js/garden.js"></script>
+<script type="text/javascript" src="js/functions.js"></script>
 
-        #mainDiv {
-            text-align: center;
-            padding: 20px;
-        }
-
-        #code {
-            display: inline-block;
-            text-align: left;
-            background-color: #1d1f21;
-            color: #c5c8c6;
-            padding: 20px;
-            border-radius: 8px;
-            font-family: "Courier New", Courier, monospace;
-        }
-
-        .comments {
-            color: #b5bd68;
-        }
-
-        #heartspan {
-            margin-top: 20px;
-            display: inline-block;
-        }
-
-        #icon {
-            font-size: 48px;
-            color: #e74c3c;
-            cursor: pointer;
-            transition: transform 0.2s;
-        }
-
-        #icon:hover {
-            transform: scale(1.2);
-        }
-
-        #loveHeart {
-            margin-top: 30px;
-            position: relative;
-        }
-
-        #garden {
-            position: absolute;
-            top: 0;
-            left: 0;
-        }
-
-        #messages {
-            font-size: 24px;
-            font-weight: bold;
-        }
-
-        .signature {
-            margin-top: 10px;
-            font-size: 18px;
-            font-style: italic;
-        }
-    </style>
 </head>
+
 <body>
-    <div id="mainDiv">
-        <div id="content">
-            <div id="code">
-                <span class="comments">/**</span><br />
-                <span class="comments">* CODING RIZZ</span><br />
-                <span class="comments">*/</span><br />
-                Hey Princess!<br />
-                Do you wanna know my favorite memory with you?<br />
-                <span class="comments">// All of it.</span><br />
-                Every day with you, I am reminded just how beautiful you are.<br />
-                <span class="comments">// Your face, Your voice, Your words.</span><br />
-                You fill my heart with every breath you take.<br />
-                As time goes on;<br />
-                I find my love for you growing stronger.<br />
-                Our love thriving evermore.<br />
-                <br>
-                All I want to say is:<br />
-                Baby, I will love you forever.<br />
-                <br>
-                <span id="heartspan">
-                    <a href="image.jpg"><i class="fas fa-heart" id="icon"></i></a>
-                </span>
-            </div>
-            <div id="loveHeart">
-                <canvas id="garden"></canvas>
-                <div id="words">
-                    <div id="messages">
-                        My Princess FOREVER
-                        <div id="elapseClock"></div>
-                    </div>
-                    <div id="loveu">
-                        I LOVE YOU FOREVER<br />
-                        <div class="signature">- RAINE</div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
 
-    <script>
-        // Typewriter Effect
-        $.fn.typewriter = function () {
-            this.each(function () {
-                var $ele = $(this),
-                    str = $ele.html(),
-                    progress = 0;
-                $ele.html('');
-                var timer = setInterval(function () {
-                    var current = str.substr(progress, 1);
-                    if (current === '<') {
-                        progress = str.indexOf('>', progress) + 1;
-                    } else {
-                        progress++;
-                    }
-                    $ele.html(str.substring(0, progress) + (progress & 1 ? '_' : ''));
-                    if (progress >= str.length) {
-                        clearInterval(timer);
-                    }
-                }, 75);
-            });
-            return this;
-        };
+<div id="mainDiv">
+	<div id="content">
+		<div id="code">
+			<span class="comments">/**</span><br />
+			<span class="space"/><span class="comments">*CODING RIZZ</span><br />
+			<span class="space"/><span class="comments">*/</span><br />
+			Hey Princess!<br />
+			Do you wanna know my favorite memory with you?<br />
+			<span class="comments">// All of it. </span><br />
+			Every day with you, I am reminded just how beautiful you are.<br />
+			<span class="comments">// Your face Your Voice Your Words.</span><br />
+			You fill my heart with joy whenever you're around<br />
+			As time goes on;<br />
+			I find my love for you growing stronger;<br />
+			Our love thriving evermore;<br />
+			We've done so much together, seen so much together.<br />
+			There have been fights ;<br />
+			<span class="comments">// And I'm sure there will be more.</span><br />
+			But our Bond will always grow back Stronger;<br />
+			<br>
+			<br>
+			All I want to say is:<br />
+			Baby, I will love you forever;<br />
+			<br>
+			<br>
+			Now If you want me to give you a kiss, you can touch the heart below<br />
+			<br>
+			<span id="heartspan">
+			<a href="image.jpg"><i class="fas fa-heart" id="icon"></i></a>
+			</span>
+		</div>
+		<div id="loveHeart">
+			<canvas id="garden"></canvas>
+			<div id="words">
+				<div id="messages">
+					My Princess FOREVER
+					<div id="elapseClock"></div>
+				</div>
+				<div id="loveu">
+					I LOVE YOU SO MUCH<br/>
+					<div class="signature">- RAINE</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
 
-        // Initialize Typewriter Effect
-        $(document).ready(function () {
-            $("#code").typewriter();
-        });
+<script type="text/javascript">
+var offsetX = $("#loveHeart").width() / 2;
+var offsetY = $("#loveHeart").height() / 2 - 55;
+// Timer setup for November 19th, 2023
+var startDate = new Date(2023, 10, 19); // Months are 0-based (10 = November)
+startDate.setHours(0, 0, 0, 0); // Set time to midnight for accuracy
 
-        // Timer for Elapsed Time
-        function updateTimer(startDate) {
-            var now = new Date();
-            var elapsed = now - startDate; // Time difference in milliseconds
+function daysSinceStart() {
+    var now = new Date();
+    var timeDiff = now - startDate; // Difference in milliseconds
+    var days = Math.floor(timeDiff / (1000 * 60 * 60 * 24)); // Convert to days
+    document.getElementById("elapseClock").innerText = `${days} days since November 19th, 2023.`;
+}
 
-            var days = Math.floor(elapsed / (1000 * 60 * 60 * 24));
-            var hours = Math.floor((elapsed % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-            var minutes = Math.floor((elapsed % (1000 * 60 * 60)) / (1000 * 60));
-            var seconds = Math.floor((elapsed % (1000 * 60)) / 1000);
+// Initial update and setup for periodic updates
+daysSinceStart();
+setInterval(daysSinceStart, 1000 * 60 * 60 * 24); // Update every 24 hours
 
-            document.getElementById("elapseClock").innerHTML =
-                `${days} days, ${hours} hours, ${minutes} minutes, and ${seconds} seconds`;
-        }
+if (!document.createElement('canvas').getContext) {
+	var msg = document.createElement("div");
+	msg.id = "errorMsg";
+	msg.innerHTML = "Your browser doesn't support HTML5!<br/>Recommend use Chrome 14+/IE 9+/Firefox 7+/Safari 4+"; 
+	document.body.appendChild(msg);
+	$("#code").css("display", "none")
+	$("#copyright").css("position", "absolute");
+	$("#copyright").css("bottom", "10px");
+	document.execCommand("stop");
+} else {
+	setTimeout(function () {
+		startHeartAnimation();
+	}, 5000);
 
-        // Set Start Date
-        var startDate = new Date(2023, 10, 19, 16, 30, 0); // November 19, 2023, 4:30 PM
-        setInterval(function () {
-            updateTimer(startDate);
-        }, 1000);
+	timeElapse(together);
+	setInterval(function () {
+		timeElapse(together);
+	}, 500);
 
-        // Initialize Timer
-        updateTimer(startDate);
-    </script>
+	adjustCodePosition();
+	$("#code").typewriter();
+}
+</script>
 </body>
 </html>
